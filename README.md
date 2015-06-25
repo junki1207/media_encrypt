@@ -20,7 +20,7 @@ git clone httpst//github.com/junki1207/media_encrypt.git
 * 암호화 : partEncrypt 함수를 호출하여 암호화할 수 있다.
 파라미터로는 송신자의 Private Key와 수신자의 Public Key, 암호화 할 파일 이름, 암호화 할 부분 갯수를 사용한다.
 ```
-ex ) partEncrypt(PRa, PUb, "test.png", 10)
+ex) partEncrypt(PRa, PUb, "test.png", 10)
 ```
 * 복호화 : Decrypt 함수를 호출하여 복호화할 수 있다. 파라미터로는 수신자의 Private Key와 수신자의 Public Key, 복호화 할 파일 이름을 사용한다.
 ```
