@@ -6,7 +6,7 @@
 		Purpose			:	1) Providing a high level of security.
 							2) Improvement speed of the conventional RSA algorithm.
 		Requirements	:	Openssl library to be installed.
-		Author			:	Junki Kim, Youngwoo Jeon
+		Author			:	Kyewan Ahn, Junki Kim, Youngwoo Jeon
 		Revision		:	2015/06/25
 		Modified		:	2015/06/25	Junki Kim
 
@@ -30,12 +30,12 @@
 
 		Module Name		:	encFileOne
 		Function		:	Encrypt an area of the file.
-		Author			:	Junki Kim, Youngwoo Jeon
+		Author			:	Kyewan Ahn, Junki Kim, Youngwoo Jeon
 		Revision		:	2015/06/25
 		Modified		:	2015/06/25	Junki Kim
 
 ***********************************************************************************************/
-int encFileOne(RSA* PRk, RSA* PUk, char* fileName);
+int Encrypt(RSA* PRk, RSA* PUk, char* fileName);
 
 /***********************************************************************************************
 
@@ -46,17 +46,17 @@ int encFileOne(RSA* PRk, RSA* PUk, char* fileName);
 		Modified		:	2015/06/25	Junki Kim
 
 *******************************************************************/
-int encFileTen(RSA* PRk, RSA* PUk, char* fileName, int sectionCount);
+int partEncrypt(RSA* PRk, RSA* PUk, char* fileName, int sectionCount);
 
 /***********************************************************************************************
 
 		Module Name		:	decFile
 		Function		:	Decrypt the encrypted file.
-		Author			:	Junki Kim, Youngwoo Jeon
+		Author			:	Kyewan Ahn, Junki Kim, Youngwoo Jeon
 		Revision		:	2015/06/25
 		Modified		:	2015/06/25	Junki Kim
 
 ***********************************************************************************************/
-int decFile(RSA* PRk, RSA* PUk, char* fileName);
+int Decrypt(RSA* PRk, RSA* PUk, char* fileName);
 
 #endif
