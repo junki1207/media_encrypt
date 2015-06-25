@@ -5,7 +5,7 @@
 		Discription		:	Test Case for performance evaluation of partial encryption.
 		Purpose			:	Compare partial encryption algorithm and whole encryption algorithm.
 		Requirements	:	Openssl library to be installed.
-		Author			:	Junki Kim, Youngwoo Jeon
+		Author			:	Kyewan Ahn, Junki Kim, Youngwoo Jeon
 		Revision		:	2015/06/25
 		Modified		:	2015/06/25	Junki Kim
 
@@ -28,7 +28,7 @@
 
 		Module Name		:	printMenu
 		Function		:	Print menu for running testcase.
-		Author			:	Junki Kim, Youngwoo Jeon
+		Author			:	Kyewan Ahn, Junki Kim, Youngwoo Jeon
 		Revision		:	2015/06/25
 		Modified		:	2015/06/25	Junki Kim
 
@@ -47,7 +47,7 @@ void printMenu()
 
 		Module Name		:	main
 		Function		:	Compare partial encryption algorithm and whole encrypt algorithm.
-		Author			:	Junki Kim, Youngwoo Jeon
+		Author			:	Kyewan Ahn, Junki Kim, Youngwoo Jeon
 		Revision		:	2015/06/25
 		Modified		:	2015/06/25	Junki Kim
 
@@ -67,7 +67,8 @@ int main(int argc, char* argv[])
 	unsigned char *pkB, *temp_pkB;
 
 	//target file name
-	char testFileName[] = "test.png";
+	char testFileName1[] = "test1.png";
+	char testFileName2[] = "test2.png";
 
 	time_t ltime;
 
@@ -142,7 +143,7 @@ int main(int argc, char* argv[])
 			start_time = clock();                  // Start_Time
 
 			//Encrypt 10 areas of the file.
-			blSize = encFileTen(keyA, pkeyB, testFileName, 10);
+			blSize = encFileTen(keyA, pkeyB, testFileName1, 10);
 
 			end_time = clock();                   // End_Time
 			dEtime = ((double)(end_time - start_time)) / CLOCKS_PER_SEC;
@@ -173,7 +174,7 @@ int main(int argc, char* argv[])
 			start_time = clock();                  // Start_Time
 
 			//Encrypt the whole of the file.
-			blSize = wholeEncFile(keyA, pkeyB, testFileName);
+			blSize = wholeEncFile(keyA, pkeyB, testFileName2);
 
 			end_time = clock();                   // End_Time
 			dEtime = ((double)(end_time - start_time)) / CLOCKS_PER_SEC;
