@@ -17,7 +17,8 @@ git clone httpst//github.com/junki1207/media_encrypt.git
 ```
 
 ## 사용법
-* 암호화 : partEncrypt 함수를 호출하여 암호화할 수 있다. 파라미터로는 송신자의 Private Key와 수신자의 Public Key, 암호화 할 파일 이름, 암호화 할 부분 갯수를 사용한다.
+* 암호화 : partEncrypt 함수를 호출하여 암호화할 수 있다.
+파라미터로는 송신자의 Private Key와 수신자의 Public Key, 암호화 할 파일 이름, 암호화 할 부분 갯수를 사용한다.
 ```
 ex ) partEncrypt(PRa, PUb, "test.png", 10)
 ```
@@ -25,3 +26,5 @@ ex ) partEncrypt(PRa, PUb, "test.png", 10)
 ```
 ex) Decrypt(PRb, PUa, "dec.enc")
 ```
+
+<br><br><br> 현재 git에 올라간 testcode는 송/수신자간 키 교환이 이루어져 있다는 가정하에 진행하였습니다.
