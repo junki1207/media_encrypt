@@ -15,6 +15,7 @@
 ```
 git clone httpst//github.com/junki1207/media_encrypt.git
 ```
+<br>  본 라이브러리를 사용하기 위해서는 OpenSSL 라이브러리가 설치되어 있어야 합니다.
 
 ## 사용법
 * 암호화 : partEncrypt 함수를 호출하여 암호화할 수 있다.
